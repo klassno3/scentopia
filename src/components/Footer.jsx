@@ -13,9 +13,9 @@ export default function Footer() {
         className="grid grid-cols-1  gap-8 justify-center justify-items-center md:grid-cols-2 max-w-[1500px] mx-auto
       "
       >
-        <div className="w-full flex gap-2 text-[#4A4A4A] items-center text-center md:items-start md:text-left">
-          <img src={logo} alt="scentopia logo" className="w-28" />
-          <div className="flex flex-col items-start gap-2">
+        <div className="w-full flex flex-col md:flex-row gap-2 text-[#4A4A4A] items-center text-center md:items-start md:text-left">
+          <img src={logo} alt="scentopia logo" className="w-24" />
+          <div className="flex flex-col items-center md:items-start gap-2">
             <p className="font-light text-sm max-w-[25em]">
               Discover captivating fragrances at Scentopia. Find your signature
               scent among our curated collection of top brands and niche
