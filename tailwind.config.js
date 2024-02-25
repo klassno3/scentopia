@@ -17,7 +17,7 @@ module.exports = {
 
       // Font Variables
       fontFamily: {
-        LobsterTwo: [ 'Your Custom Font', 'sans-serif' ],
+        LobsterTwo: [ 'Lobster Two', 'sans-serif' ],
         MiriamLibre: [ 'Miriam Libre', 'sans-serif'],
         Montserrat: [ 'Montserrat', 'sans-serif' ],
       }
