@@ -27,7 +27,7 @@ export default function Discount() {
             At FrangranceY.com, our mission is to provide you with the largest
             selection of perfumes and colognes at the cheapest prices.
           </p>
-          <button className="bg-white text-black px-4 py-2 shadow-xl font-montserrat hover:bg-accentPink-light hover:text-white hover:font-bold  rounded my-4">
+          <button className="bg-white text-black px-4 py-2 shadow-xl font-miriamLibre hover:bg-accentPink-light hover:text-white   rounded my-4 transition-all duration-500 ease-in-out">
             Shop Now
           </button>
         </div>
