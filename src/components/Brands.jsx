@@ -22,13 +22,13 @@ export default function Brands() {
           <img src={image12} className="w-28 md:w-46" alt="chanel" />
           <img src={image13} className="w-28 md:w-[9rem]" alt="dior" />
           <img src={image14} className="w-36 md:w-[9rem]" alt="gucci" />
-          <img src={image15} className="w-40 md:w-72" alt="calvin" />
+          <img src={image15} className="w-40 md:w-[14rem]" alt="calvin" />
         </div>
-        <div className="flex flex-wrap items-center justify-evenly gap-16">
-          <img src={image16} className="w-28 md:w-44" alt="versace" />
-          <img src={image17} className="w-28 md:w-52" alt="dolce" />
-          <img src={image18} className="w-36 md:w-52" alt="armani" />
-          <img src={image19} className="w-40 md:w-52" alt="YSL" />
+        <div className="flex flex-wrap items-center justify-evenly gap-8">
+          <img src={image16} className="w-28 md:w-26" alt="versace" />
+          <img src={image17} className="w-28 md:w-[8rem]" alt="dolce" />
+          <img src={image18} className="w-36 md:w-46" alt="armani" />
+          <img src={image19} className="w-40 md:w-46" alt="YSL" />
         </div>
       </div>
     </div>
