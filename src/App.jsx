@@ -2,7 +2,6 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import ProductDetail from "./pages/ProductDetail";
-import Discount from "./components/Discount";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
@@ -44,8 +43,7 @@ function App() {
   ]);
   return (
     <div className="">
-      {/* <RouterProvider router={router} /> */}
-      <Discount />
+      <RouterProvider router={router} />
     </div>
   );
 }
