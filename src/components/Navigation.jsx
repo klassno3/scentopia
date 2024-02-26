@@ -1,9 +1,202 @@
-import React from 'react'
+import { useEffect, useState,useRef } from 'react'
+import { Link } from 'react-scroll';
+import { Link as RouterLink,  useLocation } from 'react-router-dom'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Logo from '../assets/images/Logo.svg'
+import Search from './Search';
+import { faHeart, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
-export default function Navigation() {
+const Navigation = () => {
+  
+  const location = useLocation()
+  const [ isOpen, setIsOpen ] = useState( false );
+  const [ active, setActive ] = useState( false );
+  const genericHamburgerLine = `h-[3px]  w-7 md:w-10 my-[3px] rounded-full bg-black transition ease transform duration-300`;
+
+  useEffect(() => {
+    const isActive = () => {
+    window.scrollY > 0 ? setActive( true ) : setActive( false )
+    // scroll event handling logic
+  };
+
+  window.addEventListener("scroll", isActive);
+
+  // Cleanup function to remove the event listener
+  return () => {
+    window.removeEventListener("scroll", isActive);
+  };
+  }, [] );
+  // takes it to the top when we switch pages
+
+  useEffect( () => {
+    window.scrollTo( 0, 0 )
+  }, [ location ] )
+  const divEl = useRef();
+  useEffect( () => {
+    const handler = ( event ) => {
+      if ( !divEl.current ) {
+        return
+      }
+      if ( !divEl.current.contains(event.target) ) {
+     setIsOpen(false)
+   }
+      
+    }
+    document.addEventListener( "click", handler, true );
+    return () => {
+      document.removeEventListener( "click", handler, true );
+    };
+  })
   return (
-    <div>
-      navigation
+    <div
+      className={ `w-full z-[10000] ${ active ? "bg-text-white z-50 shadow-xl font-poppins  fixed top-0 left-0  " :
+        "bg-text-white fixed top-0 left-0  " }` }>
+      <div className="px-6 w-full max-w-[1440px] mx-auto flex  justify-between items-center">
+        <RouterLink to="/" className='lg:w-1/7 cursor-pointe'>
+          <img className=' w-16 md:w-20 py-1' src={ Logo } alt="" />
+        </RouterLink>
+
+        {location.pathname==="/" &&
+        <div
+          className="hidden lg:flex lg:w-1/2  font-montserrat   text-base justify-center items-start  gap-3 lg:gap-5">
+          <Link
+            to="womenPerfume"
+            activeClass="current"
+            smooth={ true }
+            spy={ true }
+            offset={ -150 }
+            className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+                Women's Perfume
+          </Link>
+          <Link
+            to="menPerfume"
+            activeClass="current"
+            smooth={ true }
+            spy={ true }
+            offset={ -150 }
+            className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+                Men Perfume
+          </Link>
+          <Link
+            to="bestSeller"
+            activeClass="current"
+            smooth={ true }
+            spy={ true }
+            offset={ -150 }
+            className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+                Best Sellers
+          </Link>
+          <Link
+            to="brands"
+            activeClass="current"
+            smooth={ true }
+            spy={ true }
+            offset={ -150 }
+            className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+           Brands
+          </Link>
+             </div>
+        }
+
+        <div className="hidden w-[40%] lg:flex items-center gap-5 font-montserrat justify-end">
+          
+          { location.pathname === "/" && <Search /> }
+          <FontAwesomeIcon
+            icon={ faHeart }
+            className="reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
+            style={{ color: "#444" }}
+          />
+          <FontAwesomeIcon icon={ faCartShopping }
+          className="reflect text-xl  cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
+          style={ { color: "#444" } }
+            
+          />
+          <RouterLink to="/signup"
+            className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+            Sign Up
+          </RouterLink>
+        </div>
+
+        <div  ref={divEl} className="flex justify-end items-center gap-5 relative lg:hidden">
+          {/* mobile menu */ }
+             
+          <FontAwesomeIcon
+              icon={faHeart}
+              className="justify-start reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
+              style={{ color: "#444" }}
+          />
+          <FontAwesomeIcon
+            icon={ faCartShopping }
+            className="reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
+            style={ { color: "#444" } }
+          />
+          { location.pathname === "/" &&
+          <button className="flex flex-col h-12 w-z  rounded justify-center items-center group" onClick={ () => setIsOpen( !isOpen ) }  >
+            <div className={ ` transition-all duration-500 ${ genericHamburgerLine }
+           ${isOpen ? "rotate-[405deg] translate-y-[6px]   group-hover:scale-105" : " group-hover:-translate-y-[3px]"  }` } />
+            <div className={ `${ genericHamburgerLine } ${ isOpen ? "opacity-0" : "" }` } />
+            <div className={ ` transition-all duration-300 ${ genericHamburgerLine } ${ isOpen ? "-rotate-[45deg]  -translate-y-[12px]  group-hover:scale-105" : " group-hover:translate-y-[2px]" }` } />
+          </button>
+          }
+        </div>
+      </div>
+      <div className={ `z-50 transition-all duration-300 flex justify-center items-center absolute overflow-x-hidden h-screen translate-x-0  w-3/4  top-[63px] ${active ? " bg-text-white/95":" bg-text-white/95"} ${ isOpen ? "lg:hidden right-0 " : "-right-full" }` }>
+        <div className="flex flex-col font-montserrat text-base gap-5">
+          { location.pathname === "/" && <Search /> }
+            <RouterLink to="/signup"
+                onClick={()=>setIsOpen(false)}
+                className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+            Sign Up
+          </RouterLink>
+         
+          
+          { location.pathname === "/" &&
+            <div className="flex flex-col font-montserrat text-base gap-5">
+          <Link
+          onClick={()=>setIsOpen(false)}
+            to="womenPerfume"
+            activeClass="current"
+            smooth={ true }
+            spy={ true }
+            offset={ -150 }
+            className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+            Women's Perfume
+          </Link>
+          <Link
+             onClick={()=>setIsOpen(false)}
+            to="menPerfume"
+            activeClass="current"
+            smooth={ true }
+            spy={ true }
+            offset={ -150 }
+            className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+           Men Perfume
+          </Link>
+          <Link
+             onClick={()=>setIsOpen(false)}
+             to="bestSeller"
+             activeClass="current"
+             smooth={ true }
+            spy={ true }
+            offset={ -150 }
+           className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+            Best Sellers
+          </Link>
+          <Link
+             onClick={()=>setIsOpen(false)}
+             to="brands"
+            activeClass="current"
+            smooth={ true }
+            spy={ true }
+            offset={ -150 }
+           className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+           Brands
+          </Link>
+        </div>
+        }
+        </div>
+      </div>
     </div>
   )
 }
+export default Navigation

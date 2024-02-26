@@ -16,9 +16,12 @@ module.exports = {
 
       // Font Variables
       fontFamily: {
-        LobsterTwo: ["Lobster Two", "sans-serif"],
-        MiriamLibre: ["Miriam Libre", "sans-serif"],
-        Montserrat: ["Montserrat", "sans-serif"],
+        lobsterTwo: ["Lobster Two", "sans-serif"],
+        miriamLibre: ["Miriam Libre", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+        backgroundImage: {
+        'text-gradient': 'linear-gradient(to right, #FF286A, #FD598B 50%, #000 50%)',
       },
     },
   },
