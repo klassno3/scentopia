@@ -11,7 +11,9 @@ const Navigation = () => {
   const location = useLocation()
   const [ isOpen, setIsOpen ] = useState( false );
   const [ active, setActive ] = useState( false );
+
   const genericHamburgerLine = `h-[3px]  w-7 md:w-10 my-[3px] rounded-full bg-[#444] transition ease transform duration-300`;
+
 
   useEffect(() => {
     const isActive = () => {
@@ -52,6 +54,8 @@ const Navigation = () => {
       className={ `w-full z-[10000] ${ active ? "bg-text-white z-50 shadow-xl font-poppins  fixed top-0 left-0  " :
         "bg-text-light-gray fixed top-0 left-0  " }` }>
       <div className="px-2 md:px-8 w-full max-w-[1440px] mx-auto flex  justify-between items-center">
+       
+
         <RouterLink to="/" className='lg:w-1/7 cursor-pointe'>
           <img className=' w-16 md:w-20 py-1' src={ Logo } alt="" />
         </RouterLink>
@@ -140,6 +144,7 @@ const Navigation = () => {
           }
         </div>
       </div>
+
       <div className={ `z-50  shadow-md transition-all duration-300 flex justify-center pt-32 absolute overflow-x-hidden h-screen translate-x-0  w-3/4  top-[74.5px] ${active ? " bg-text-white/95":" bg-text-light-gray"} ${ isOpen ? "lg:hidden right-0 " : "-right-full" }` }>
         <div className="flex flex-col font-montserrat text-base gap-5">
           { location.pathname === "/" && <div className="pl-12 sm:pl-0">
@@ -149,12 +154,15 @@ const Navigation = () => {
             <RouterLink to="/signup"
                 onClick={()=>setIsOpen(false)}
                 className="pl-12 sm:pl-0 text-sm md:text-base relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]">
+
             Sign Up
           </RouterLink>
          
           
           { location.pathname === "/" &&
+
             <div className="flex flex-col font-montserrat text-sm md:text-base gap-5 pl-12 sm:pl-0">
+
           <Link
           onClick={()=>setIsOpen(false)}
             to="womenPerfume"

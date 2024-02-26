@@ -21,8 +21,9 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
         backgroundImage: {
-          'text-gradient': 'linear-gradient(to right, #FF286A, #FD598B 50%, #000 50%)',
-          "hero-bg":""
+
+        'text-gradient': 'linear-gradient(to right, #FF286A, #FD598B 50%, #000 50%)',
+
       },
     },
   },
