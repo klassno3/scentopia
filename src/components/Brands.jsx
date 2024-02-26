@@ -19,16 +19,16 @@ export default function Brands() {
       </h1>
       <div className="flex lg:flex-col p-2">
         <div className="flex flex-wrap items-center justify-evenly gap-6">
-          <img src={image12} className="w-28 md:w-52" alt="chanel" />
-          <img src={image13} className="w-28 md:w-60" alt="dior" />
-          <img src={image14} className="w-36 md:w-56" alt="gucci" />
+          <img src={image12} className="w-28 md:w-46" alt="chanel" />
+          <img src={image13} className="w-28 md:w-[9rem]" alt="dior" />
+          <img src={image14} className="w-36 md:w-[9rem]" alt="gucci" />
           <img src={image15} className="w-40 md:w-72" alt="calvin" />
         </div>
         <div className="flex flex-wrap items-center justify-evenly gap-16">
-          <img src={image16} className="w-28 md:w-44" alt="chanel" />
-          <img src={image17} className="w-28 md:w-52" alt="dior" />
-          <img src={image18} className="w-36 md:w-52" alt="gucci" />
-          <img src={image19} className="w-40 md:w-52" alt="calvin" />
+          <img src={image16} className="w-28 md:w-44" alt="versace" />
+          <img src={image17} className="w-28 md:w-52" alt="dolce" />
+          <img src={image18} className="w-36 md:w-52" alt="armani" />
+          <img src={image19} className="w-40 md:w-52" alt="YSL" />
         </div>
       </div>
     </div>
