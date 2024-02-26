@@ -9,8 +9,8 @@ module.exports = {
         "accentPink-medium": "#FD598B",
         "accentPink-light": "#FD6292",
         "text-black": "#000",
-        "text-gray": "#333",
-        "text-light-gray": "##F9F9F9",
+        "text-gray": "#777",
+        "text-light-gray": "#F9F9F9",
         "text-white": "#FFF",
       },
 
@@ -21,7 +21,8 @@ module.exports = {
         montserrat: ["Montserrat", "sans-serif"],
       },
         backgroundImage: {
-        'text-gradient': 'linear-gradient(to right, #FF286A, #FD598B 50%, #000 50%)',
+          'text-gradient': 'linear-gradient(to right, #FF286A, #FD598B 50%, #000 50%)',
+          "hero-bg":""
       },
     },
   },
