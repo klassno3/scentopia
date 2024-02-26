@@ -15,14 +15,14 @@ const Search = ({onSubmit}) => {
     <div>
       <form action="" className="" onSubmit={ handleFormSubmit } >
 
-        <div className="flex items-center gap-3 border-[1px] border-text-gray bg-text-white rounded-md px-2  py-1   
+        <div className="flex items-center gap-3 border-[1px] border-text-gray bg-text-white rounded-md px-2  py-1 ">  
       
           <FontAwesomeIcon
             icon={ faSearch }
             className="reflect text-sm cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
           />
 
-          <input type="search" placeholder='Search .....' value={ term } onChange={ handleChange }
+          <input type="search" placeholder='Search .....' value={ term } onChange={ handleChange }/>
 
           <input type="search" placeholder='Search ...' value={ term } onChange={ handleChange }
 
