@@ -22,8 +22,7 @@ const Search = ({onSubmit}) => {
             className="reflect text-sm cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
           />
 
-          <input type="search" placeholder='Search .....' value={ term } onChange={ handleChange }/>
-
+        
           <input type="search" placeholder='Search ...' value={ term } onChange={ handleChange }
 
             className="flex items-center justify-between focus:outline-none text-sm  font-Montserrat" />
