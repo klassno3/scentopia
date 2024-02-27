@@ -11,11 +11,20 @@ export default function Discount() {
         <img
           src={img1}
           alt="Perfume"
-          className="w-40 h-40 md:display-none"
-          style={{ transform: "rotate(30deg)" }}
+          className=" md:display-none"
+          style={{
+            transform: "rotate(30deg)",
+            width: "170px",
+            height: "200px",
+          }}
         />
         <div className="flex justify-right ml-20">
-          <img src={img2} alt="versace" className="w-40 h-40 align-right " />
+          <img
+            src={img2}
+            alt="versace"
+            className=" align-right "
+            style={{ width: "140px", height: "270px" }}
+          />
         </div>
       </div>
       <div className="w-full flex flex-col items-center md:items-start  lg:items-start text-center ">
@@ -33,7 +42,7 @@ export default function Discount() {
         </div>
 
         <div
-          className="text-white bg-accentPink-light w-40 h-40 md:w-40 md:h-40 lg:w-40 lg:h-40  md:ml-10 lg:ml-10 text-2xl md:text-3xl lg:text-3xl flex justify-center items-center font-lobsterTwo shadow-lg rounded-full mt-4 "
+          className="text-white bg-accentPink-light w-40 h-40 md:w-40 md:h-40 lg:w-60 lg:h-60  md:ml-10 lg:ml-10 text-2xl md:text-3xl lg:text-3xl flex justify-center items-center font-lobsterTwo shadow-lg rounded-full mt-4 "
           style={{
             borderRadius: "50%",
           }}
@@ -46,16 +55,24 @@ export default function Discount() {
           <img
             src={img3}
             alt="coco"
-            className="w-40 h-40 "
-            style={{ transform: "rotate(-20deg)" }}
+            // className="w-44 h-35 "
+            style={{
+              transform: "rotate(-20deg)",
+              width: "170px",
+              height: "200px",
+            }}
           />
         </div>
 
         <img
           src={img4}
           alt="gucci"
-          className="w-40 h-40 "
-          style={{ transform: "rotate(10deg)" }}
+          // className="w-44 h-35 "
+          style={{
+            transform: "rotate(10deg)",
+            width: "170px",
+            height: "200px",
+          }}
         />
       </div>
     </div>
