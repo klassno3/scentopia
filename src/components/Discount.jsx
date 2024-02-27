@@ -29,20 +29,21 @@ export default function Discount() {
       </div>
       <div className="w-full flex flex-col items-center md:items-start  lg:items-start text-center ">
         <div className="w-full flex flex-col space-y-4 items-center justify-center ">
-          <h1 className="text-4xl md:text-6xl font-bold font-miriamLibre text-white mb-4">
+          <h1 className="text-4xl md:text-6xl font-bold font-montserrat text-white mb-4">
             Shop winter deals
           </h1>
-          <p className="text-white text-1xl md:text-2xl mb-4 font-montserrat">
+          <p className="text-white text-lg md:text-xl mb-4 font-montserrat">
             At FrangranceY.com, our mission is to provide you with the largest
             selection of perfumes and colognes at the cheapest prices.
           </p>
-          <button className="bg-white text-black px-4 py-2 shadow-xl hover:bg-accentPink-light hover:text-white hover:font-bold  rounded my-4">
+          <button className="bg-white text-black px-4 py-2 shadow-xl font-miriamLibre hover:bg-accentPink-light hover:text-white   rounded my-4 transition-all duration-500 ease-in-out">
             Shop Now
           </button>
         </div>
 
         <div
-          className="text-white bg-accentPink-light w-40 h-40 md:w-40 md:h-40 lg:w-60 lg:h-60  md:ml-10 lg:ml-10 text-2xl md:text-3xl lg:text-3xl flex justify-center items-center font-lobsterTwo shadow-lg rounded-full mt-4 "
+         className="text-white bg-accentPink-light w-40 h-40 md:w-40 md:h-40 lg:w-40 lg:h-40  md:ml-10 lg:ml-10 text-2xl md:text-3xl lg:text-3xl flex justify-center items-center 
+          font-miriam shadow-lg rounded-full mt-4 "
           style={{
             borderRadius: "50%",
           }}

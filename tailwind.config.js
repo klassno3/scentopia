@@ -9,16 +9,21 @@ module.exports = {
         "accentPink-medium": "#FD598B",
         "accentPink-light": "#FD6292",
         "text-black": "#000",
-        "text-gray": "#333",
-        "text-light-gray": "##F9F9F9",
+        "text-gray": "#777",
+        "text-light-gray": "#F9F9F9",
         "text-white": "#FFF",
       },
 
       // Font Variables
       fontFamily: {
-        LobsterTwo: ["Lobster Two", "sans-serif"],
-        MiriamLibre: ["Miriam Libre", "sans-serif"],
-        Montserrat: ["Montserrat", "sans-serif"],
+        lobsterTwo: ["Lobster Two", "sans-serif"],
+        miriamLibre: ["Miriam Libre", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+        backgroundImage: {
+
+        'text-gradient': 'linear-gradient(to right, #FF286A, #FD598B 50%, #000 50%)',
+
       },
     },
   },
