@@ -9,7 +9,7 @@ import image19 from "../assets/images/image 19.png";
 
 export default function Brands() {
   return (
-    <div className="bg-gradient-to-br from-accentPink-dark to-accentPink-light flex flex-col text-center p-4 gap-14">
+    <div id="brands" className="bg-gradient-to-br from-accentPink-dark to-accentPink-light flex flex-col text-center p-4 gap-14">
       <h1 className="mt-7 text-white font-Montserrat text-2xl lg:text-3xl">
         Popular{" "}
         <span className="relative">
