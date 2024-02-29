@@ -33,10 +33,6 @@ export default function WomenPerfumeList() {
           ))}
         </div>
       </div>
-      <div id="womenPerfume"></div>
-      <div id="menPerfume"></div>
-      <div id="bestSeller"></div>
-      <div id="brands"></div>
     </div>
   );
 }
