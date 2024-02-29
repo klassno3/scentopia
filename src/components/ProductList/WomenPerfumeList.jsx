@@ -7,8 +7,8 @@ export default function WomenPerfumeList() {
       <div id="newArrivals" className="flex flex-col space-y-4 p-5">
         <div className="flex flex-col gap-4 justify-center items-center text-center md:flex-row">
           <h1 className="text-3xl font-lobsterTwo font-bold text-black w-full  md:text-center mr-2">
-            New{" "}
-            <span className="border-b-2 border-accentPink-dark">Arrivals</span>
+            Women's{" "}
+            <span className="border-b-2 border-accentPink-dark">Perfume</span>
           </h1>
           <div>
             <select
