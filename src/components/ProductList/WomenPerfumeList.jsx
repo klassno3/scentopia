@@ -3,12 +3,12 @@ import { womenData } from "./data";
 import WomenCard from "./WomenCard";
 export default function WomenPerfumeList() {
   return (
-    <div className="flex flex-col h-auto w-full  ">
-      <div id="newArrivals" className="flex flex-col space-y-4 p-2">
-        <div className="flex justify-between items-center md:justify-center gap-2">
-          <h1 className="text-2xl md:text-3xl font-lobsterTwo font-bold text-black w-full  md:text-center">
-            Women's{" "}
-            <span className="border-b-2 border-accentPink-dark">Perfume</span>
+    <div className="flex flex-col h-auto w-full">
+      <div id="newArrivals" className="flex flex-col space-y-4 p-5">
+        <div className="flex flex-col gap-4 justify-center items-center text-center md:flex-row">
+          <h1 className="text-3xl font-lobsterTwo font-bold text-black w-full  md:text-center mr-2">
+            New{" "}
+            <span className="border-b-2 border-accentPink-dark">Arrivals</span>
           </h1>
           <div>
             <select
@@ -32,6 +32,11 @@ export default function WomenPerfumeList() {
             <WomenCard key={index} womenData={item} />
           ))}
         </div>
+      </div>
+      <div className="p-2 text-center m-6 ">
+        <button className="hover:text-accentPink-dark transition-colors duration-300 ease-in-out">
+          see more ...
+        </button>
       </div>
     </div>
   );
