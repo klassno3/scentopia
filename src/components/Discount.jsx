@@ -3,6 +3,7 @@ import img1 from "../assets/images/pngwing.com (1).png";
 import img2 from "../assets/images/pngwing.com (2).png";
 import img3 from "../assets/images/pngwing.com (3).png";
 import img4 from "../assets/images/pngwing.com.png";
+import { Link } from "react-scroll";
 
 export default function Discount() {
   return (
@@ -36,13 +37,20 @@ export default function Discount() {
             At FrangranceY.com, our mission is to provide you with the largest
             selection of perfumes and colognes at the cheapest prices.
           </p>
-          <button className="bg-white text-black px-4 py-2 shadow-xl font-miriamLibre hover:bg-accentPink-light hover:text-white   rounded my-4 transition-all duration-500 ease-in-out">
+          <Link
+            to="bestSeller"
+            smooth={true}
+            duration={1000}
+            offset={-50}
+            spy={true}
+            className="bg-white cursor-pointer text-black px-4 py-2 shadow-xl font-miriamLibre hover:bg-accentPink-light hover:text-white   rounded my-4 transition-all duration-500 ease-in-out"
+          >
             Shop Now
-          </button>
+          </Link>
         </div>
 
         <div
-         className="text-white bg-accentPink-light w-40 h-40 md:w-40 md:h-40 lg:w-40 lg:h-40  md:ml-10 lg:ml-10 text-2xl md:text-3xl lg:text-3xl flex justify-center items-center 
+          className="text-white bg-accentPink-light w-40 h-40 md:w-40 md:h-40 lg:w-40 lg:h-40  md:ml-10 lg:ml-10 text-2xl md:text-3xl lg:text-3xl flex justify-center items-center 
           font-miriam shadow-lg rounded-full mt-4 "
           style={{
             borderRadius: "50%",
