@@ -1,7 +1,17 @@
-import React from "react";
-import { data } from "./data";
+import React, { useState } from "react";
 import ProductCard from "./ProductCard";
-function BestSellers() {
+import eye from "../../assets/images/eye.png";
+import hide from "../../assets/images/hide.png";
+function BestSellers({ data }) {
+  const result = Math.min(8, data?.length);
+  const bestSellers = data?.slice(0, result);
+  const others = data?.slice(result);
+  const [showMore, setShowMore] = useState(false);
+
+  const handleShowMore = () => {
+    setShowMore(!showMore);
+  };
+
   return (
     <div className="flex flex-col space-y-4 p-5">
       <div className="flex justify-between items-center md:justify-center ">
@@ -27,13 +37,29 @@ function BestSellers() {
         </div>
       </div>
       <div className="flex flex-wrap justify-center items-center gap-4 md:place-items-center md:grid md:grid-cols-3 lg:grid-cols-4">
-        {data?.map((item, index) => (
+        {bestSellers?.map((item, index) => (
           <ProductCard key={index} data={item} />
         ))}
+        {showMore &&
+          others?.map((item, index) => <ProductCard key={index} data={item} />)}
       </div>
       <div className="p-2 text-center m-6 ">
-        <button className="hover:text-accentPink-dark transition-colors duration-300 ease-in-out">
-          see more ...
+        <button
+          className="hover:text-accentPink-dark transition-colors duration-300 ease-in-out"
+          onClick={handleShowMore}
+        >
+          {showMore ? null : (
+            <div className="flex items-center">
+              <span>Show More</span>
+              <img src={eye} className="ml-1 mt-1 w-4 h-4" alt="eye" />
+            </div>
+          )}
+          {showMore && others.length > 0 ? (
+            <div className="flex items-center">
+              <span>Show Less</span>
+              <img src={hide} className="ml-1 mt-1 w-4 h-4" alt="hide" />
+            </div>
+          ) : null}
         </button>
       </div>
     </div>

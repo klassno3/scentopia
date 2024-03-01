@@ -1,7 +1,7 @@
 export const data = [
   {
     id: 1,
-    title: "Vke eau de perfume",
+    title: "Eau De Parfum",
     image:
       "https://s3-alpha-sig.figma.com/img/a362/df95/6e6296cbe1c6d4f8267e0525156d320c?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lxz6NUYjkuc35vsJgKLowoj4n1BRzszjmn-0Ja9HhGmTBLqFqfOPFF4OrToBf1Cl-VZgtm1HU88l2oG~MsfVSVvz0449n3xButxCr6op2L320fCEfaTV65M3r-Qo1FHYelCKt1RcxUpL0fiuRmS8rh5NaXK45w9ebWLHDyGekZjsKg1FiGUs0oI3yq5xZu5RWVFXpahm21D~xPd2pE8i9JqlUI-TOhMY-pTTDQ0qYVbPTeDDDG5s9nsVKyQG6JC0VniD5yJC2NN-gKXXlnJ3pmIWWIqVtsjBDIu64rWOQ29SY2sxqu40fEkc7hcrwrHGlqMDjsGGQv87WY4~u6WGJQ__",
     desc: "mid night wispers 50 ml.",
@@ -11,7 +11,7 @@ export const data = [
   },
   {
     id: 2,
-    title: "Vke eau de perfume",
+    title: "detect 2 perfume",
     image:
       "https://s3-alpha-sig.figma.com/img/92fc/6852/174a240c2f50a4e0d7ad10555bd3ff16?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pg1ZvU-~PWDRTfYcsEHMswoAXzRwdxI-Bg0-G9YphD755GleFBr4XL7zWb9m-y3mfl7ZEjW1X9JArbrZ2cxqWLA0OjT~bAXT19bNSvaKfdUDd2~CyfmzsHSvTOTHQQpsZp-ZunjFxJDzFDJN5QixvnCdJy28uj0Bzxact9i6j5vCW27~0WcXfDONBaHtYDeasxG8LLDZu6Nq3iGRmm9ij4gswpanjDrouDIlsJlWlgQBZbXhpZ-FbP8IJIQZ4fIFq502SI7KseuVDoYvRSQ3NCtSDTauEibaFtmzAKF0Wr~YdnfjLvs1iMutuRSUn8P7QoJxjSXoX9ZmuUtlOQF1Mg__",
     desc: "mid night wispers 50 ml.",
@@ -158,6 +158,36 @@ export const data = [
     price: "$35",
     gender: "women",
     arrivalTime: "2024-08-01T09:00:00.000Z",
+  },
+  {
+    id: 17,
+    title: "L'Essence de Presence",
+    image:
+      "https://s3-alpha-sig.figma.com/img/a362/df95/6e6296cbe1c6d4f8267e0525156d320c?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lxz6NUYjkuc35vsJgKLowoj4n1BRzszjmn-0Ja9HhGmTBLqFqfOPFF4OrToBf1Cl-VZgtm1HU88l2oG~MsfVSVvz0449n3xButxCr6op2L320fCEfaTV65M3r-Qo1FHYelCKt1RcxUpL0fiuRmS8rh5NaXK45w9ebWLHDyGekZjsKg1FiGUs0oI3yq5xZu5RWVFXpahm21D~xPd2pE8i9JqlUI-TOhMY-pTTDQ0qYVbPTeDDDG5s9nsVKyQG6JC0VniD5yJC2NN-gKXXlnJ3pmIWWIqVtsjBDIu64rWOQ29SY2sxqu40fEkc7hcrwrHGlqMDjsGGQv87WY4~u6WGJQ__",
+    desc: "A floral harmony blended with natural essences.",
+    price: "$48",
+    gender: "women",
+    arrivalTime: "2024-09-01T10:00:00.000Z",
+  },
+  {
+    id: 18,
+    title: "Oceanic Breeze",
+    image:
+      "https://s3-alpha-sig.figma.com/img/9c3e/c5af/ff78793c366e31af2599113ab329fcf3?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Icp-PadkuU5CAErj1s4JUiZeIetK-oIlce5-jgt4FSrQ-OvyX0UNGlTtB7ADECJoP7jW1oRQRFhFMGlJGaKcA9cJcZGnl2ohgF--PAfYI7qRtpKUz2zqMSJDEWknEBWujiZjw32MF8FV8Q7hAX6H2XPfeGbcqsWjY6KVnZm59Rrjwq5XMgvouJd1SkHLNEp2vV0Q~0RzpuEie1i1PMXxnhYyFQ4JSg8pvDq4qUWFw6OiHXf3y8hneMfXhpIW45zJqCO5sbGeGNPdwq4hK7T6yU21YPXFImE1V31XNuHsHkRHF~gcByuLU-MxLqpTGmUPW6bsAGO~v5XqKjGJwkYPeQ__",
+    desc: "Refreshing aquatic scents for an invigorating experience.",
+    price: "$42",
+    gender: "men",
+    arrivalTime: "2024-10-01T11:00:00.000Z",
+  },
+  {
+    id: 19,
+    title: "Velvet Mystique",
+    image:
+      "https://s3-alpha-sig.figma.com/img/92fc/6852/174a240c2f50a4e0d7ad10555bd3ff16?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=pg1ZvU-~PWDRTfYcsEHMswoAXzRwdxI-Bg0-G9YphD755GleFBr4XL7zWb9m-y3mfl7ZEjW1X9JArbrZ2cxqWLA0OjT~bAXT19bNSvaKfdUDd2~CyfmzsHSvTOTHQQpsZp-ZunjFxJDzFDJN5QixvnCdJy28uj0Bzxact9i6j5vCW27~0WcXfDONBaHtYDeasxG8LLDZu6Nq3iGRmm9ij4gswpanjDrouDIlsJlWlgQBZbXhpZ-FbP8IJIQZ4fIFq502SI7KseuVDoYvRSQ3NCtSDTauEibaFtmzAKF0Wr~YdnfjLvs1iMutuRSUn8P7QoJxjSXoX9ZmuUtlOQF1Mg__",
+    desc: "A luxurious blend of musk and velvet scents.",
+    price: "$55",
+    gender: "women",
+    arrivalTime: "2024-11-01T12:00:00.000Z",
   },
   // Add more entries as needed
 ];
