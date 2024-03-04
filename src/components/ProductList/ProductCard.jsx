@@ -8,7 +8,7 @@ function ProductCard({ data }) {
   return (
     <div
       className="flex flex-col  p-3"
-      style={{ width: "276px", height: "322px" }}
+      style={{ width: "276px", height: "auto" }}
     >
       <Link to={`/product/${id}`} className="w-full h-full flex justify-start ">
         {" "}
