@@ -9,13 +9,10 @@ import image19 from "../assets/images/image 19.png";
 
 export default function Brands() {
   return (
-
-   
     <div
       id="brands"
       className="bg-gradient-to-br from-accentPink-dark to-accentPink-light flex flex-col text-center p-4 gap-14"
     >
-
       <h1 className="mt-7 text-white font-Montserrat text-2xl lg:text-3xl">
         Popular{" "}
         <span className="relative">
@@ -24,7 +21,7 @@ export default function Brands() {
         </span>
       </h1>
       <div className="flex lg:flex-col p-2">
-        <div className="flex flex-wrap items-center justify-evenly gap-6">
+        <div className="flex flex-wrap items-center justify-evenly gap-6 md:ml-5">
           <img src={image12} className="w-28 md:w-46" alt="chanel" />
           <img src={image13} className="w-28 md:w-[9rem]" alt="dior" />
           <img src={image14} className="w-36 md:w-[9rem]" alt="gucci" />

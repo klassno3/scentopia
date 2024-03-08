@@ -8,9 +8,10 @@ const Payments = require('../Model/Payment');
 const { body } = require('express-validator');
 const asyncHandler = require('../Middleware/asyncHandler.js'); 
 const nodemailer = require('nodemailer');
-const User = require('./Model/User.js');
+const User = require('../Model/User');
 const crypto = require('crypto');
-const registerUser = async (req, res) => {
+
+exports.registerUser = async (req, res) => {
     try {
         const { FirstName, LastName, Email, password } = req.body;
         // Validate user input
@@ -69,7 +70,7 @@ const registerUser = async (req, res) => {
             res.status(400).json({ error: 'An error occurred' });
     }
 };
-const sendEmail = async (email, subject, text) => {
+exports.sendEmail = async (email, subject, text) => {
     try {
         const transporter = nodemailer.createTransport({
             service: 'gmail', // use 'gmail' or any other service you prefer
@@ -92,7 +93,7 @@ const sendEmail = async (email, subject, text) => {
     }
 };
 //Reset Password
-const resetPassword = async (req, res) => {
+exports.resetPassword = async (req, res) => {
     const { email } = req.body;
 
     try {
@@ -129,7 +130,7 @@ const resetPassword = async (req, res) => {
     }
 };
 //Change Password
-const changePassword = async (req, res) => {
+exports.changePassword = async (req, res) => {
     const { userId, oldPassword, newPassword } = req.body;
 
     try {
@@ -154,13 +155,13 @@ const changePassword = async (req, res) => {
     }
 };
 //verification
-const generateVerificationCode = () => {
+exports.generateVerificationCode = () => {
     const prefix = 'VER-';
     const randomCode = Math.floor(1000 + Math.random() * 9000);
     return prefix + randomCode;
 };
 //Forgot Password
-const forgotPassword = async (req, res) => {
+exports.forgotPassword = async (req, res) => {
     const { email } = req.body;
 
     try {
@@ -207,7 +208,7 @@ const forgotPassword = async (req, res) => {
 };
 
 //Login Users
-const loginUser = async (req, res) => {
+exports.loginUser = async (req, res) => {
     try {
         const { email, password } = req.body;
 
@@ -239,7 +240,7 @@ const loginUser = async (req, res) => {
 };
 
 //Logout users
-const logoutUser = async (req, res) => {
+exports.logoutUser = async (req, res) => {
     try {
         if (!req.body.userId) {
             return res.status(400).json({ message: 'User ID is required' });
@@ -264,7 +265,7 @@ const logoutUser = async (req, res) => {
     }
 };
 //Get single Users 
-const getUserById = async (req, res) => {
+exports.getUserById = async (req, res) => {
     const userId = req.params.id;
 
     try {
@@ -281,7 +282,7 @@ const getUserById = async (req, res) => {
     }
 };
 //Get all users
-const getAllUsers = async (req, res) => {
+exports.getAllUsers = async (req, res) => {
     try {
         const users = await User.find();
         res.status(200).json(users);
@@ -290,7 +291,7 @@ const getAllUsers = async (req, res) => {
         res.status(500).json({ error: 'Server Error', details: error.message });    }
 };
 //Update Users
-const updateUser = async (req, res) => {
+exports.updateUser = async (req, res) => {
     const userId = req.params.id;
     const userData = req.body;
 
@@ -312,7 +313,7 @@ const updateUser = async (req, res) => {
     }
 };
 //delete Users
-const deleteUser = async (req, res) => {
+exports.deleteUser = async (req, res) => {
     if (!req.params.hasOwnProperty('id')) {
         return res.status(400).json({ error: 'User ID not provided' });
     }
@@ -334,18 +335,6 @@ const deleteUser = async (req, res) => {
         console.error(error); // Log the actual error message for debugging purposes
         res.status(500).json({ error: `An error occurred while deleting the user: ${error.message}` }); // Send a specific error message to the client    
     } 
-};
-module.exports = {
-    registerUser,
-    resetPassword,
-    changePassword,
-    forgotPassword,
-    loginUser,
-    logoutUser,
-    getUserById,
-    getAllUsers,
-    updateUser,
-    deleteUser
 };
 
 

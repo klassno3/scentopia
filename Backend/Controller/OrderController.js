@@ -1,6 +1,6 @@
 // modules and dependencies
 const express = require('express');
-const Order = require('../models/Order');
+const Order = require('../Model/Order');
 const { body, validationResult } = require('express-validator');
 
 // GET all orders

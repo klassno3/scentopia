@@ -4,8 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const Payments = require('../models/paymentModel');
-const sendEmail = require('../utils/sendEmail');
+const Payments = require('../Model/Payment');
 const nodemailer = require('nodemailer');
 
 const processPayment = async (req, res) => {
