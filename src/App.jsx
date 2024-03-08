@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import Cart from "./components/Cart/CartSidebar";
 import ProductDetail from "./pages/ProductDetail";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
@@ -11,6 +12,7 @@ function App() {
     return (
       <div className="">
         <Navigation />
+        <Cart/>
         <Outlet />
         <Footer />
       </div>

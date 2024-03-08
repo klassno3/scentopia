@@ -1,13 +1,19 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef ,useContext} from "react";
 import { Link } from "react-scroll";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Logo from "../assets/images/Logo.svg";
 import Search from "./Search";
+import { SidebarContext } from '../context/SidebarContext';
+import { CartContext } from '../context/CartContext';
 import { faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   const location = useLocation();
+    const { itemAmount } = useContext( CartContext );
+
+    const { isSidebarOpen, setIsSidebarOpen } = useContext( SidebarContext )
+
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -48,12 +54,13 @@ const Navigation = () => {
   });
   return (
     <div
-      className={`w-full z-[10000] ${
+      className={`w-full z-40 ${
         active
-          ? "bg-text-white z-50 shadow-xl font-poppins  fixed top-0 left-0  "
+          ? "bg-text-white z-40 shadow-xl font-poppins  fixed top-0 left-0  "
           : "bg-text-light-gray fixed top-0 left-0  "
       }`}
     >
+
       <div className="px-2 md:px-8 w-full max-w-[1440px] mx-auto flex  justify-between items-center">
         <RouterLink to="/" className="lg:w-1/7 cursor-pointe">
           <img className=" w-16 md:w-20 py-1" src={Logo} alt="" />
@@ -112,11 +119,21 @@ const Navigation = () => {
             className="reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
             style={{ color: "#444" }}
           />
+          <div className="relative">
+
           <FontAwesomeIcon
+            onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
             icon={faCartShopping}
             className="reflect text-xl  cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
             style={{ color: "#444" }}
-          />
+            />
+               <div className="absolute -top-1 -right-3 bg-accentPink-dark text-white w-4 h-4 text-xs rounded-full px-2">
+              <div className="flex justify-center text-secondary-100">
+             {itemAmount}
+
+              </div>
+            </div>
+            </div>
           <RouterLink
             to="/signup"
             className=" relative cursor-pointer z-10 transition-all bg-[-100%] duration-500 bg-[length:200%_100%] text-transparent bg-text-gradient bg-clip-text hover:bg-[0%]"
@@ -136,11 +153,22 @@ const Navigation = () => {
             className="justify-start reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
             style={{ color: "#444" }}
           />
+             <div className="relative">
+
           <FontAwesomeIcon
+            onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
             icon={faCartShopping}
-            className="reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
+            className="reflect text-xl  cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
             style={{ color: "#444" }}
-          />
+            />
+               <div className="absolute -top-1 -right-3 bg-accentPink-dark text-white w-4 h-4 text-xs rounded-full px-2">
+              <div className="flex justify-center text-secondary-100">
+             {itemAmount}
+
+              </div>
+            </div>
+            </div>
+         
           {location.pathname === "/" && (
             <button
               className="flex flex-col h-12 w-z  rounded justify-center items-center group"
