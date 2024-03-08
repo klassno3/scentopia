@@ -1,8 +1,5 @@
 const mongoose = require('mongoose');
 
-const slugify = require('slugify');
-const mongoosePaginate = require('mongoose-paginate-v2');
-
 // Schema Config
 const categorySchemaConfig = {
     timestamps: true,
@@ -41,8 +38,6 @@ categorySchema.pre('validate', function(next) {
     next();
 });
 
-// Plugin
-categorySchema.plugin(mongoosePaginate);
 
 // Model
 const Category = mongoose.model('Category', categorySchema);

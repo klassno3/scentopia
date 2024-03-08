@@ -69,7 +69,7 @@ const createCart = async (req, res) => {
 //Get all cart
 const getAllCarts = async (req, res) => {
     try {
-        const carts = await Cart.find().populate('user', 'name email').exec(); // This is the corrected code that uses const
+        const carts = await Cart.find().populate('user', 'name email').exec(); 
 
         if (carts.length === 0) {
             return res.status(404).json({ error: 'No carts found' });

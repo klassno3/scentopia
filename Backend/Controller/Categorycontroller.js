@@ -2,10 +2,10 @@
 // module and dependencies
 
 const express = require('express');
-const Category = require('../models/Category');
+const Category = require('../Model/Category');
 
 // Create Category
-exports.createCategory = async (req, res) => {
+const createCategory = async (req, res) => {
     // validate request
     if (!req.body.name) {
         return res.status(400).json({ error: 'Name is required' });
@@ -36,7 +36,7 @@ exports.createCategory = async (req, res) => {
 
 
 // Get all categories
-exports.getAllCategories = async (req, res) => {
+const getAllCategories = async (req, res) => {
     try {
         // retrieve all categories from the database
         const categories = await Category.find();
