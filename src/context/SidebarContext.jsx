@@ -4,15 +4,29 @@ export const SidebarContext = createContext();
 
 const SidebarProvider = ( { children } ) => {
   
-  const [ isSidebarOpen, setIsSidebarOpen ] = useState( false );
+  const [ isCartOpen, setIsCartOpen ] = useState( false );
+  const [ isFavOpen, setIsFavOpen ] = useState( false );
   
-  const handleClose = () => {
-    setIsSidebarOpen( false )
-    console.log( isSidebarOpen )
+  const handleCartClose = () => {
+    setIsCartOpen( false )
+    
+  }
+  const handleFavClose = () => {
+    setIsFavOpen( false )
     
   }
 
-  return <SidebarContext.Provider value={{isSidebarOpen,setIsSidebarOpen,handleClose}}>{ children }</SidebarContext.Provider>
+  return <SidebarContext.Provider
+  
+    value={ {
+      isCartOpen,
+      isFavOpen,
+      setIsFavOpen,
+      setIsCartOpen,
+      handleCartClose,
+      handleFavClose
+    } }>
+    { children }</SidebarContext.Provider>
 
 }
 export default SidebarProvider

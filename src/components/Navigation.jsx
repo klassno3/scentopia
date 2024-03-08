@@ -6,13 +6,17 @@ import Logo from "../assets/images/Logo.svg";
 import Search from "./Search";
 import { SidebarContext } from '../context/SidebarContext';
 import { CartContext } from '../context/CartContext';
+import { FavContext } from '../context/FavContext';
+
 import { faHeart, faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 const Navigation = () => {
   const location = useLocation();
-    const { itemAmount } = useContext( CartContext );
+  const { cartItemAmount } = useContext( CartContext );
+  
+    const { favItemAmount } = useContext( FavContext );
 
-    const { isSidebarOpen, setIsSidebarOpen } = useContext( SidebarContext )
+    const { isCartOpen, setIsCartOpen ,isFavOpen,setIsFavOpen} = useContext( SidebarContext )
 
   const [isOpen, setIsOpen] = useState(false);
   const [active, setActive] = useState(false);
@@ -114,22 +118,31 @@ const Navigation = () => {
 
         <div className="hidden w-[40%] lg:flex items-center gap-5 font-montserrat justify-end">
           {location.pathname === "/" && <Search />}
+            <div className="relative">
           <FontAwesomeIcon
+            onClick={()=>setIsFavOpen(!isFavOpen)}
             icon={faHeart}
-            className="reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
+            className="reflect text-xl  cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
             style={{ color: "#444" }}
-          />
-          <div className="relative">
+            />
+               <div className="absolute -top-1 -right-3 bg-accentPink-dark text-white w-4 h-4 text-xs rounded-full px-2">
+              <div className="flex justify-center text-secondary-100">
+             {favItemAmount}
 
+              </div>
+            </div>
+            </div>
+         
+          <div className="relative">
           <FontAwesomeIcon
-            onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
+            onClick={()=>setIsCartOpen(!isCartOpen)}
             icon={faCartShopping}
             className="reflect text-xl  cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
             style={{ color: "#444" }}
             />
                <div className="absolute -top-1 -right-3 bg-accentPink-dark text-white w-4 h-4 text-xs rounded-full px-2">
               <div className="flex justify-center text-secondary-100">
-             {itemAmount}
+             {cartItemAmount}
 
               </div>
             </div>
@@ -147,23 +160,33 @@ const Navigation = () => {
           className="flex justify-end items-center gap-5 relative lg:hidden"
         >
           {/* mobile menu */}
-
+          <div className="relative">
           <FontAwesomeIcon
+            onClick={()=>setIsFavOpen(!isFavOpen)}
             icon={faHeart}
-            className="justify-start reflect text-xl cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
-            style={{ color: "#444" }}
-          />
-             <div className="relative">
-
-          <FontAwesomeIcon
-            onClick={()=>setIsSidebarOpen(!isSidebarOpen)}
-            icon={faCartShopping}
             className="reflect text-xl  cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
             style={{ color: "#444" }}
             />
                <div className="absolute -top-1 -right-3 bg-accentPink-dark text-white w-4 h-4 text-xs rounded-full px-2">
               <div className="flex justify-center text-secondary-100">
-             {itemAmount}
+             {favItemAmount}
+
+              </div>
+            </div>
+            </div>
+        
+             <div className="relative">
+
+          <FontAwesomeIcon
+            onClick={()=>setIsCartOpen(!isCartOpen)}
+            icon={faCartShopping}
+            className="reflect text-xl  cursor-pointer hover:scale-125 transition-all duration-500 ease-in-out"
+            style={{ color: "#444" }}
+            />
+            
+               <div className="absolute -top-1 -right-3 bg-accentPink-dark text-white w-4 h-4 text-xs rounded-full px-2">
+              <div className="flex justify-center text-secondary-100">
+             {cartItemAmount}
 
               </div>
             </div>

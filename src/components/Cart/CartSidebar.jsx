@@ -8,23 +8,22 @@ import { SidebarContext } from "../../context/SidebarContext"
 import { CartContext } from "../../context/CartContext"
 const CartSidebar = () => {
 
-  const { isSidebarOpen, handleClose } = useContext( SidebarContext );
-  const { cart, clearCart, total,itemAmount } = useContext( CartContext );
-console.log(cart)
+  const { isCartOpen, handleCartClose } = useContext( SidebarContext );
+  const { cart, clearCart, total,cartItemAmount } = useContext( CartContext );
   const renderedCart = cart.map( ( item ) => {
     return <CartItem key={ item.id } item={ item } />
   } );
 
   return (
-    <div  className={` ${isSidebarOpen ? "right-0" : "z-50 -right-full"} w-full bg-white fixed top-0 h-full shadow-2xl 
+    <div  className={` ${isCartOpen ? "right-0" : "z-50 -right-full"} w-full bg-white fixed top-0 h-full shadow-2xl 
     md:w-[35vw] xl:max-w-[30vw] font-inter transition-all duration-300 z-50 px-4 lg:px-[35px]` }>
       
       <div className="flex  items-center justify-between font-inter py-6 border-b">
         <div className="uppercase text-xm font-semibold">
-          shopping Cart ({itemAmount})
+          shopping Cart ({cartItemAmount})
 
         </div>
-        <div onClick={ handleClose} className="cursor-pointer w-8 h-8 flex justify-center items-center">
+        <div onClick={ handleCartClose} className="cursor-pointer w-8 h-8 flex justify-center items-center">
           <IoMdArrowForward/>
         </div>
 
