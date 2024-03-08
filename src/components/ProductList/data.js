@@ -5,9 +5,14 @@ export const data = [
     image:
       "https://s3-alpha-sig.figma.com/img/a362/df95/6e6296cbe1c6d4f8267e0525156d320c?Expires=1710115200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=lxz6NUYjkuc35vsJgKLowoj4n1BRzszjmn-0Ja9HhGmTBLqFqfOPFF4OrToBf1Cl-VZgtm1HU88l2oG~MsfVSVvz0449n3xButxCr6op2L320fCEfaTV65M3r-Qo1FHYelCKt1RcxUpL0fiuRmS8rh5NaXK45w9ebWLHDyGekZjsKg1FiGUs0oI3yq5xZu5RWVFXpahm21D~xPd2pE8i9JqlUI-TOhMY-pTTDQ0qYVbPTeDDDG5s9nsVKyQG6JC0VniD5yJC2NN-gKXXlnJ3pmIWWIqVtsjBDIu64rWOQ29SY2sxqu40fEkc7hcrwrHGlqMDjsGGQv87WY4~u6WGJQ__",
     desc: "mid night wispers 50 ml.",
-    price: "  35",
+    price: "35",
     gender: "women",
     arrivalTime: "2023-12-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 2,
