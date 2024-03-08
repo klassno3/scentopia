@@ -208,9 +208,9 @@ const securePaymentProcessing = async (req, res) => {
         // set payment.gateway_response = payment_gateway's response
 
         // add your payment gateway's payment processing API call and update payment status and details here
-        const paymentGateway = 'Stripe';
-        const apiKey = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'; // replace with your Stripe secret key
-        const stripe = require('stripe')(apiKey);
+        const paymentGateway = 'CHAPA';
+        const apiKey = 'sk_test_4eC39HqLyjWDarjtT1zdp7dc'; // replace with your CHAPA secret key
+        const CHAPA = require('CHAPA')(apiKey);
 
         const paymentIntent = await stripe.paymentIntents.create({
             amount: paymentDetails.amount,
