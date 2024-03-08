@@ -1,6 +1,11 @@
 const mongoose = require('mongoose');
+const connectDB = async () => {
+    // Check if mongoose has an active connection
+    if (mongoose.connection.readyState === 1) {
+        console.log("Mongoose is already connected.");
+        return;
+    }
 
-const connectDB = async (req, res) => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_URI, {
             useNewUrlParser: true,

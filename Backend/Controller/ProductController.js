@@ -1,13 +1,11 @@
 //Import module and dependencies 
 const express = require('express');
 const mongoose = require('mongoose');
-const Product = require('../models/Product');
-const Review = require('../models/Review');
-const Wishlist = require('../models/Wishlist');
+const Product = require('../Model/Product');
+const Review = require('../Model/Review');
+const Wishlist = require('../Model/Wishlist');
 const { body } = require('express-validator');
-const productService = require('../services/productService')
 const { validationResult } = require('express-validator');
-const validateProduct = require('../validators/productValidator');
 // Create Product
 const createProduct = async (req, res) => {
     try {
