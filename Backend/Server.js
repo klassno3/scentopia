@@ -2,7 +2,7 @@
 require('dotenv').config();
 const bodyParser = require('body-parser');
 const crypto = require('crypto'); 
-
+const http = require('http');
 // Load dependencies
 const express = require('express');
 const mongoose = require('mongoose');
@@ -26,8 +26,7 @@ const categoryRoutes = require('./Routes/categoryRoutes');
 // Initialize Express app
 const app = express();
 
-const sessionSecret = crypto.randomBytes(64).toString('hex');
-
+const sessionSecret = process.env.SESSION_SECRET;
 
 // Use middleware
 app.use(helmet());
@@ -58,9 +57,13 @@ routes.forEach(({ path, route }) => {
     app.use(path, route);
 });
 
-
+// Create a simple HTTP server
+const server = http.createServer((req, res) => {
+  res.writeHead(200, {'Content-Type': 'text/plain'});
+  res.end('Hello, world!\n');
+});
 // Start the server
-const port = process.env.PORT || 4000;
+const port = process.env.PORT;
 app.listen(port, () => {
     console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`);
 });
