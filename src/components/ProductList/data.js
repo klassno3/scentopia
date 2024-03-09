@@ -23,6 +23,11 @@ export const data = [
     price: "  35",
     gender: "women",
     arrivalTime: "2024-02-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 3,
@@ -33,6 +38,11 @@ export const data = [
     price: "  35",
     gender: "men",
     arrivalTime: "2023-11-01T03:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 4,
@@ -43,6 +53,11 @@ export const data = [
     price: "  35",
     gender: "men",
     arrivalTime: "2024-02-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 5,
@@ -53,6 +68,11 @@ export const data = [
     price: "  35",
     gender: "men",
     arrivalTime: "2024-01-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 6,
@@ -63,6 +83,11 @@ export const data = [
     price: "  35",
     gender: "women",
     arrivalTime: "2024-01-01T04:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 7,
@@ -73,6 +98,11 @@ export const data = [
     price: "  35",
     gender: "women",
     arrivalTime: "2023-09-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 8,
@@ -83,6 +113,11 @@ export const data = [
     price: "  35",
     gender: "men",
     arrivalTime: "2023-10-01T12:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 9,
@@ -93,6 +128,11 @@ export const data = [
     price: " 35",
     gender: "women",
     arrivalTime: "2023-08-01T15:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 10,
@@ -103,6 +143,11 @@ export const data = [
     price: " 35",
     gender: "men",
     arrivalTime: "2023-07-01T21:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 11,
@@ -113,6 +158,11 @@ export const data = [
     price: " 35",
     gender: "women",
     arrivalTime: "2024-04-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 12,
@@ -123,6 +173,11 @@ export const data = [
     price: " 35",
     gender: "men",
     arrivalTime: "2024-03-01T18:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 13,
@@ -133,6 +188,11 @@ export const data = [
     price: " 35",
     gender: "men",
     arrivalTime: "2024-05-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 14,
@@ -143,6 +203,11 @@ export const data = [
     price: " 35",
     gender: "men",
     arrivalTime: "2024-06-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 15,
@@ -153,6 +218,11 @@ export const data = [
     price: " 35",
     gender: "women",
     arrivalTime: "2024-07-01T04:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 16,
@@ -163,6 +233,11 @@ export const data = [
     price: " 35",
     gender: "women",
     arrivalTime: "2024-08-01T09:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 17,
@@ -173,6 +248,11 @@ export const data = [
     price: " 48",
     gender: "women",
     arrivalTime: "2024-09-01T10:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 18,
@@ -183,6 +263,11 @@ export const data = [
     price: " 42",
     gender: "men",
     arrivalTime: "2024-10-01T11:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   {
     id: 19,
@@ -193,6 +278,11 @@ export const data = [
     price: " 55",
     gender: "women",
     arrivalTime: "2024-11-01T12:00:00.000Z",
+    description:
+      "Step into a world of unparalleled opulence with Midnight Whispers, an exquisite fragrance that weaves an enchanting symphony of cool and cold. This is a celebration of sophistication, crafted with the finest essences and imbued with the allure of precious cool hues.",
+    size: "50ml",
+    rating: "3.5",
+    ratedBy: "100",
   },
   // Add more entries as needed
 ];

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { data } from "../components/ProductList/data";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
@@ -8,6 +8,7 @@ import Rating from "@mui/material/Rating";
 export default function ProductDetail() {
   const { id } = useParams();
   const product = data.find((item) => item.id == id);
+
   return (
     <>
       {/*showing path first */}
@@ -17,17 +18,31 @@ export default function ProductDetail() {
           <MdOutlineKeyboardArrowLeft className="text-gray-500" size={25} />
         </Link>
         <span className="text-gray-600 font-bold ml-1 text-xl font-montserrat">
-          Home / products / {product?.title}
+          <Link to="/" className="hover:underline">
+            {" "}
+            Home{" "}
+          </Link>{" "}
+          /{" "}
+          {product?.gender === "men" ? (
+            <Link to="/#menPerfume" className="hover:underline">
+              Products
+            </Link>
+          ) : (
+            <Link to="/#womenPerfume" className="hover:underline">
+              Products
+            </Link>
+          )}
+          / {product?.title}
         </span>
       </div>
-      <div className="flex  ">
+      <div className="flex flex-col items-center md:flex-row w-full">
         <img
           src={product?.image}
           alt={product?.title}
           className="w-1/2 h-full object-contain"
         />
         <div className="flex flex-col w-1/2 ">
-          <h1 className="text-3xl font-montserrat font-bold text-black w-full m-4  ">
+          <h1 className="text-3xl font-montserrat font-bold text-black w-full my-4  ">
             {product?.title}
           </h1>
           <p className="text-black mb-4 font-montserrat-400 line-clamp-3">
@@ -50,7 +65,7 @@ export default function ProductDetail() {
               {product?.ratedBy}
             </span>
           </div>
-          <button className="bg-[#ffe5ed] text-accentPink-dark px-4 py-2 shadow-xl hover:shadow-lg rounded w-1/4 m-4">
+          <button className="bg-[#ffe5ed] text-accentPink-dark px-4 py-2 shadow-xl hover:shadow-lg rounded  w-[180px] md:w-1/3 ">
             Add To Cart
           </button>
         </div>
