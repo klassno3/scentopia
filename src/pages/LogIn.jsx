@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 
-const SignUp = () => {
+const LogIn = () => {
   const [visible, setVisibile] = useState(false);
 
   const handleVisibility = () => {
@@ -59,7 +59,7 @@ const SignUp = () => {
       <div className="flex-grow max-w-[30em] border border-accentPink-light bg-white rounded-md shadow-lg">
         <div className="flex flex-col gap-4 p-6">
           <h1 className="text-2xl text-accentPink-dark font-lobsterTwo font-bold ">
-            SIGN UP
+            LOG IN
           </h1>
           <hr className="border border-black/30" />
           <form
@@ -68,36 +68,7 @@ const SignUp = () => {
           >
             <div className="w-full">
               <input
-                className="w-full bg-transparent p-2 caret-accentPink-medium outline-accentPink-medium border border-gray-400 rounded-sm"
-                id="fullName"
-                placeholder="Full name"
-                type="text"
-                {...formik.getFieldProps("fullName")}
-              />
-              {formik.touched.fullName && formik.errors.fullName ? (
-                <div className="text-red-600 text-xs mt-1">
-                  {formik.errors.fullName}
-                </div>
-              ) : null}
-            </div>
-            <div className="w-full">
-              {/* <label htmlFor="email">Email:</label> */}
-              <input
-                className="w-full bg-transparent p-2 caret-accentPink-medium outline-accentPink-medium border border-gray-400 rounded-sm"
-                id="PhoneNumber"
-                placeholder="Phone number"
-                type="number"
-                {...formik.getFieldProps("PhoneNumber")}
-              />
-              {formik.touched.PhoneNumber && formik.errors.PhoneNumber ? (
-                <div className="text-red-600 text-xs mt-1">
-                  {formik.errors.PhoneNumber}
-                </div>
-              ) : null}
-            </div>
-            <div className="w-full">
-              <input
-                className="w-full bg-transparent p-2 caret-accentPink-medium outline-accentPink-medium border border-gray-400 rounded-sm"
+                className="w-full bg-transparent p-2 border border-gray-400 rounded-sm caret-accentPink-medium outline-accentPink-medium"
                 id="email"
                 placeholder="Email"
                 type="email"
@@ -113,7 +84,7 @@ const SignUp = () => {
               {/* <label htmlFor="password">Password:</label> */}
 
               <input
-                className="w-full bg-transparent p-2 caret-accentPink-medium outline-accentPink-medium border border-gray-400 rounded-sm"
+                className="w-full bg-transparent p-2 border border-gray-400 rounded-sm caret-accentPink-medium outline-accentPink-medium"
                 id="password"
                 placeholder="Password"
                 type={visible ? "text" : "password"}
@@ -137,47 +108,18 @@ const SignUp = () => {
                 </div>
               ) : null}
             </div>
-            <div className="relative w-full">
-              {/* <label htmlFor="password">Password:</label> */}
-
-              <input
-                className="w-full bg-transparent p-2 caret-accentPink-medium outline-accentPink-medium border border-gray-400 rounded-sm"
-                id="ConfirmPassword"
-                placeholder="ConfirmPassword"
-                type={visible ? "text" : "password"}
-                {...formik.getFieldProps("ConfirmPassword")}
-              />
-              {visible ? (
-                <VisibilityIcon
-                  onClick={handleVisibility}
-                  className="absolute top-5 right-3 transform -translate-y-1/2 text-gray-500"
-                />
-              ) : (
-                <VisibilityOffIcon
-                  onClick={handleVisibility}
-                  className="absolute top-5 right-3 transform -translate-y-1/2 text-gray-500"
-                />
-              )}
-
-              {formik.touched.ConfirmPassword &&
-              formik.errors.ConfirmPassword ? (
-                <div className="text-red-600 text-xs mt-1">
-                  {formik.errors.ConfirmPassword}
-                </div>
-              ) : null}
-            </div>
             <button
               className="w-full rounded-sm bg-accentPink-dark hover:bg-accentPink-medium text-white p-2  hover:bg-primary-light"
               type="submit"
             >
-              Sign up
+              Log In
             </button>
           </form>
           <div className="flex flex-col-reverse md:flex-row justify-between gap-2">
             <div className="flex gap-2">
-              <p className="">Already have an account?</p>
-              <a href="/login" className="text-blue-700">
-                Log in
+              <p className="">Don't have an account?</p>
+              <a href="/signup" className="text-blue-700">
+                Sign up
               </a>
             </div>
             <a href="/forgot-password" className="text-gray-500">
@@ -189,4 +131,4 @@ const SignUp = () => {
     </div>
   );
 };
-export default SignUp;
+export default LogIn;

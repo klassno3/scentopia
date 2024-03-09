@@ -1,5 +1,5 @@
 import Home from "./pages/Home";
-import Login from "./pages/Login";
+import LogIn from "./pages/LogIn";
 import SignUp from "./pages/SignUp";
 import Cart from "./components/Cart/CartSidebar";
 import Favorite from "./components/Favorite/FavoriteSidebar";
@@ -14,7 +14,7 @@ function App() {
       <div className="">
         <Navigation />
         <Cart />
-        <Favorite/>
+        <Favorite />
         <Outlet />
         <Footer />
       </div>
@@ -31,7 +31,7 @@ function App() {
         },
         {
           path: "/login",
-          element: <Login />,
+          element: <LogIn />,
         },
         {
           path: "/signup",
