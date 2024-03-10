@@ -55,8 +55,8 @@ const SignUp = () => {
   });
 
   return (
-    <div className="w-full flex h-svh items-center justify-center p-2 bg-gradient-to-br from-accentPink-dark via-accentPink-medium to-accentPink-light">
-      <div className="flex-grow max-w-[30em] border border-accentPink-light bg-white rounded-md shadow-lg">
+    <div className="w-full flex h-svh mt-[5em]  items-center justify-center bg-gradient-to-br from-accentPink-dark via-accentPink-medium to-accentPink-light">
+      <div className="max-w-[30em] border border-accentPink-light bg-white rounded-md shadow-lg">
         <div className="flex flex-col gap-4 p-6">
           <h1 className="text-2xl text-accentPink-dark font-lobsterTwo font-bold ">
             SIGN UP
