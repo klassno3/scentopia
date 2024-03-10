@@ -22,6 +22,11 @@ const paymentRoutes = require('./Routes/paymentRoutes');
 const orderRoutes = require('./Routes/orderRoutes');
 const productRoutes = require('./Routes/productRoutes');
 const categoryRoutes = require('./Routes/categoryRoutes');
+const cartRoutes = require('./Routes/CartRoutes');
+const discount = require('./Routes/DiscountRoutes');
+const wishlist = require('./Routes/WishlistRoutes')
+const recommendations = require('./Routes/recommendationsRoutes');
+const review = require('./Routes/reviewRoutes');
 
 // Initialize Express app
 const app = express();
@@ -35,7 +40,7 @@ app.use(morgan('combined'));
 app.use(compression());
 app.use(session({
     secret: sessionSecret,
-    cookie: { secure: false, httpOnly: true },
+    cookie: { secure: false, httpOnly: false },
     saveUninitialized: false,
     resave: false, 
 }));
@@ -45,25 +50,24 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.use(cookieParser());
 
 // Define routes
-const routes = [
-    { path: '/api/users', route: userRoutes },
-    { path: '/api/payment', route: paymentRoutes },
-    { path: '/api/orders', route: orderRoutes },
-    { path: '/api/products', route: productRoutes },
-    { path: '/api/categories', route: categoryRoutes },
-];
+app.use('/api/v1/users', userRoutes);
+app.use('/api/v1/payment', paymentRoutes);
+app.use('/api/v1/orders', orderRoutes);
+app.use('/api/v1/products', productRoutes);
+app.use('/api/v1/categories', categoryRoutes);
+app.use('/api/v1/cart', cartRoutes);
+app.use('/api/v1/discount' ,discount);
+app.use('/api/v1/wishlist', wishlist);
+app.use('/api/v1/recommendations', recommendations);
+app.use('/api/v1/review', review);
 
-routes.forEach(({ path, route }) => {
-    app.use(path, route);
-});
 
-// Create a simple HTTP server
-const server = http.createServer((req, res) => {
-  res.writeHead(200, {'Content-Type': 'text/plain'});
-  res.end('Hello, world!\n');
-});
+
+
+
+
 // Start the server
-const port = process.env.PORT;
-app.listen(port, () => {
-    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`);
+const Port = process.env.PORT;
+app.listen(Port, () => {
+    console.log(`Server running in ${process.env.NODE_ENV} mode on port ${Port}`);
 });
